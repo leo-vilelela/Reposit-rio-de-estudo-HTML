@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th colspan="" style="border: solid 2px black;"><h1>Faça seu cadastro</h1></th>
+            </tr>
+        </table>
+        <br /><br />
+        <form action="">
+            <table>
+            <tr>
+                <td>
+                    <label for="nome">Digite seu nome:</label>
+                </td>
+                <td>
+                <input type="text" name="nome" id="nome" required /> *
+                </td>
+            </tr>    
+            </table>
+            <br /><br />
+            <label for="email">Digite seu E-mail:</label><br />
+            <input type="email" name="email" id="email" required />
+            *<br /><br />
+
+            <label for="senha">Digite sua senha:</label><br />
+            <input type="password" name="senha" id="senha" required />
+            *<br /><br />
+
+            <label for="bio"> Breve descrição</label><br />
+            <textarea name="bio" id="bio" cols="30" rows="4" required>
+            </textarea>
+            *<br /><br />
+
+            <label for="UF">Escolha sua unidade federativa:</label> *<br />
+            <select name="UF" id="UF" required>
+                <option value="" disabled selected>UF</option>
+                <option value="SP" required>SP</option>
+                <option value="CE" required>CE</option>
+                <option value="BA" required>BA</option>
+                <option value="PE" required>PE</option>
+                <option value="RJ" required>RJ</option></select
+            ><br /><br />
+            <label for="unidades">Confirme sua unidade federativa</label><br>
+            <input list="unidades" />
+            <datalist id="unidades">
+                <option value="SP"></option>
+                <option value="CE"></option>
+                <option value="BA"></option>
+                <option value="PE"></option>
+                <option value="RJ"></option>
+            </datalist>
+
+            <br /><br />
+
+            <label for="cidade">Digite sua cidade:</label><br />
+            <input type="text" name="cidade" id="cidade" required /><br /><br />
+
+            <label for="rua">Digite sua rua:</label><br />
+            <input type="text" name="rua" id="rua" required /><br /><br />
+
+            <label for="numero">Número:</label><br />
+            <input
+                type="number"
+                name="numero"
+                id="numero"
+                required
+            /><br /><br />
+
+            <label for="cep">CEP:</label><br />
+            <input
+                type="text"
+                name="cep"
+                id="cep"
+                pattern="\d{5}-\d{3}"
+                required
+            /><br /><br /><!-- A mesma expressão regular pode ser escrita dessa forma "\d\d\d\d\d-\d\d\d"   -->
+
+            <select name="atuação" id="atuação">
+                <option value="lembrete" selected disabled>
+                    Selecione sua área de atuação
+                </option>
+                <option value="fullstack">Fullstack</option>
+                <option value="cloud">Cloud</option>
+                <option value="fullstack, cloud">Ambos</option>
+            </select>
+            <br /><br />
+
+            <fieldset>
+                <legend>ÁREA DE ATUAÇÃO</legend>
+
+                <input type="radio" name="atuação" id="fullstack" required />
+                <label for="fullstack">Fullstack</label><br />
+
+                <input type="radio" name="atuação" id="cloud" required />
+                <label for="cloud">Cloud</label><br />
+
+                <input type="radio" name="atuação" id="ambos" required />
+                <label for="ambos">Fullstack</label><br />
+            </fieldset>
+            <br /><br />
+
+            <button>Concluir cadastro</button>
+            <button type="reset">limpar</button><br /><br />
+        </form>
+        <a href="login.html"><button type="reset">Fazer login</button></a>
+    
+    </body>
+</html>
+
+

@@ -1,22 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulários</title>
-</head>
-<body>
-    <h1>Formulário</h1>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Formulários</title>
+    </head>
+    <body>
+        <h1>Formulário</h1>
 
-    <form action="">
-        Nome:
-        <input type="text"><br>
-        Email:
-        <input type="email"><br>
-        Senha:
-        <input type="password"><br>
-        <button> Enviar! </button>
-    </form>
-    
-</body>
+        <form action="">
+            teste<input type="number" pattern="[0-9] {4,8}"><br>
+
+            Nome:
+            <input type="text" name="nome" maxlength="10" placeholder="Digite seu nome:" /><br />
+            Email:
+            <input type="email" name="email" /><br />
+            Senha:
+            <input type="password" name="senha"/><br />
+            Iade:
+            <input type="number" min="0" max="120" name="idade"/><br />
+            Horário de registro
+            <input type="time"  name="hora" value="12:00" disabled /><br />
+            Data de nascimento:
+            <input type="date" min="2023-06-26" name="data" /><br />
+            Telefone:
+            <input type="tel" name="fone"/><br />
+            URL da foto:
+            <input type="url" name="url"/><br />
+            Foto do documento:
+            <input type="file" name="foto" accept=".pdf " multiple /><br />
+            Escolha sua cor favorita:
+            <input type="color" name="cor" value="#FF0099"/><br /><br />
+            <fieldset style="background-color: aquamarine;">
+                <legend>Estado Civil</legend>
+                Solteiro: <input type="radio" name="estado" value="Solteiro"/><br /><br />
+                Casado: <input type="radio" name="estado" value="Casado"/><br /><br />
+            </fieldset>
+            Aceito os termos de uso:
+            <input type="checkbox" /><br><br>
+            Nível de inglês:
+            1 <input type="range" min="1" max="5" step="1"> 5 <br><br>
+            <select name="estado">
+                <option disabled selected>Selecione um Estado</option>
+                <option value="">São Paulo</option>
+                <option value="">Pernambuco</option>
+                <option value="">Ceará</option>
+                <option value="Costa Rica"></option>
+            </select><br><br>
+            <br /><br />
+            Fale um pouco sobre você: <br>
+            <textarea id="" name="texto" cols="30" rows="10" placeholder="Area de texto" ></textarea>
+            
+            <input type="button" value="input button">
+            <input type="reset" value="input reset">
+            <input type="submit" value="input submit">
+            
+            <button type="button">button</button>
+            <button type="reset">reset</button>
+            <button type="submit">submit</button>
+            <button type="menu">menu</button>
+            <button>Enviar!</button>
+        </form>
+    </body>
 </html>
